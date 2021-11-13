@@ -31,3 +31,4 @@ function playRound(playerSelection, computerSelection) {
 
 const playerSelection = prompt("Let the battle begin! Rock, Paper or Scissors?");
 const computerSelection = computerPlay();
+playRound(playerSelection.toLowerCase(), computerSelection.toLowerCase());
