@@ -49,3 +49,9 @@ while (playerScore < 3 && computerScore < 3) {
   
   game();
 }
+
+if (playerScore === 3) {
+  alert("Congratulations! You won the game!")
+} else if (computerScore === 3) {
+  alert("Sorry, you lost the game!")
+}
