@@ -7,11 +7,22 @@
 .choice {
   border: .5rem solid #fff;
   border-radius: 2rem;
-  padding: 1.4rem;
   cursor: pointer;
 }
 
 .far {
   font-size: clamp(10rem, 12rem, 10vw);
   color: #fff;
+  padding: 1.4rem;
+}
+
+.fa-hand-paper {
+  padding: 1.4rem 2.2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .game-choices {
+    flex-direction: row;
+    gap: 4rem;
+  }
 }
