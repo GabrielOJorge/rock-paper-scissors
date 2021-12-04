@@ -1,0 +1,3 @@
+.score-board {
+  font-size: clamp(3rem, 4rem, 4vw);
+}
