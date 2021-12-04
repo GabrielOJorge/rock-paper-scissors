@@ -20,7 +20,6 @@ button {
   color: var(--clr-light-grey);
   background: none;
   border-style: none;
-  border: .1rem solid #fff;
 }
 
 .fa-regular {
