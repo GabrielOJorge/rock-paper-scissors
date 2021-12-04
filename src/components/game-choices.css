@@ -1,0 +1,17 @@
+.game-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.choice {
+  border: .5rem solid #fff;
+  border-radius: 2rem;
+  padding: 1.4rem;
+  cursor: pointer;
+}
+
+.far {
+  font-size: clamp(10rem, 12rem, 10vw);
+  color: #fff;
+}
