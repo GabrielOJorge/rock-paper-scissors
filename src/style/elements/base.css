@@ -5,7 +5,7 @@ body {
   height: 100vh;
   background-color: var(--clr-black);
   font-family: 'Press Start 2P', cursive;
-  color: var(--clr-light-grey);
+  color: #fff;
 }
 
 main {
@@ -17,7 +17,7 @@ main {
 
 button {
   font-family: 'Press Start 2P', cursive;
-  color: var(--clr-light-grey);
+  color: #fff;
   background: none;
   border-style: none;
 }

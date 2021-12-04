@@ -1,0 +1,7 @@
+.start-btn {
+  font-size: clamp(2rem, 2.5rem, 2vw);
+  border: .3rem solid #fff;
+  border-radius: 3rem;
+  padding: 1.5rem;
+  cursor: pointer;
+}
