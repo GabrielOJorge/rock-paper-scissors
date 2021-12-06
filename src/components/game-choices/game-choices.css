@@ -8,16 +8,19 @@
   cursor: pointer;
 }
 
-.far:hover {
-  color: #fff;
-  border-color: #fff;
-}
+
 .far {
   border: .5rem solid var(--clr-light-grey);
   border-radius: 2rem;
   font-size: clamp(10rem, 12rem, 10vw);
   color: var(--clr-light-grey);
   padding: 1.4rem;
+  transition: all .3s ease-in;
+}
+
+.far:hover {
+  color: #fff;
+  border-color: #fff;
 }
 
 .fa-hand-paper {
