@@ -5,14 +5,18 @@
 }
 
 .choice {
-  border: .5rem solid #fff;
-  border-radius: 2rem;
   cursor: pointer;
 }
 
-.far {
-  font-size: clamp(10rem, 12rem, 10vw);
+.far:hover {
   color: #fff;
+  border-color: #fff;
+}
+.far {
+  border: .5rem solid var(--clr-light-grey);
+  border-radius: 2rem;
+  font-size: clamp(10rem, 12rem, 10vw);
+  color: var(--clr-light-grey);
   padding: 1.4rem;
 }
 
