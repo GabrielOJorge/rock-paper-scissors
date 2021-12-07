@@ -1,4 +1,4 @@
-const startBtn = document.querySelector('.start-btn');
+const mainBtn = document.querySelector('.main-btn');
 const textDisplay = document.querySelector('#text-display')
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
@@ -9,9 +9,9 @@ let playerScore = 0;
 let computerScore = 0;
 let playerSelection = '';
 
-startBtn.addEventListener('click', () => {
+mainBtn.addEventListener('click', () => {
   textDisplay.textContent = "Let the battle begin! Rock, Paper or Scissors?";
-  startBtn.style.display = 'none';
+  mainBtn.style.display = 'none';
   game();
 
   rock.addEventListener('click', () => {
