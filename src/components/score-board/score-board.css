@@ -4,4 +4,10 @@
   align-items: center;
   gap: 2.5rem;
   font-size: clamp(3rem, 4rem, 4vw);
+  text-align: center;
+  line-height: 5rem;
+}
+
+.score-board h1 {
+  font-size: clamp(2rem, 3rem, 4vw);
 }
