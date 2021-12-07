@@ -1,4 +1,5 @@
 const mainBtn = document.querySelector('.main-btn');
+const playAgain = document.querySelector('.main-btn.-play-again')
 const textDisplay = document.querySelector('#text-display')
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
@@ -69,8 +70,10 @@ function game() {
   if (playerScore === 3) {
     textDisplay.textContent = "Congratulations! You won the game!";
     gameChoices.style.display = "none";
+    playAgain.style.display = "initial";
   } else if (computerScore === 3) {
     textDisplay.textContent = "Sorry, you lost the game!";
     gameChoices.style.display = "none";
+    playAgain.style.display = "initial";
   }
 }
