@@ -29,17 +29,29 @@ mainBtn.addEventListener('click', () => {
     playerSelection = 'scissors'
     game();
   });
+
+  playAgain.addEventListener('click', () => {
+    playerScore = 0;
+    computerScore = 0;
+    gameChoices.style.display = "flex";
+    playAgain.style.display = "none";
+    game();
+
+    textDisplay.textContent = "Let the battle begin! Rock, Paper or Scissors?";
+  });
 });
 
-function computerPlay() {
-  const play = ["rock", "paper", "scissors"];
-  const randomValue = list => list[Math.floor(Math.random() * list.length)];
-  
-  return randomValue(play);
-}
-
 function game() {
-  let computerSelection = computerPlay();
+  function computerPlay() {
+    const play = ["rock", "paper", "scissors"];
+    const randomValue = list => list[Math.floor(Math.random() * list.length)];
+    
+    return randomValue(play);
+  }
+
+  computerSelection = computerPlay();
+
+  console.log(computerSelection);
   
   function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
@@ -63,6 +75,8 @@ function game() {
       textDisplay.textContent = "You lose! Rock beats Scissors.";
       computerScore++;
     }
+
+    console.log(playerScore, computerScore);
   }
   
   playRound(playerSelection.toLowerCase(), computerSelection.toLowerCase());
