@@ -5,6 +5,8 @@ const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 const gameChoices = document.querySelector('.game-choices');
+let userScore = document.querySelector('#user-score');
+let compScore = document.querySelector('#comp-score');
 
 let playerScore = 0;
 let computerScore = 0;
@@ -13,7 +15,6 @@ let playerSelection = '';
 mainBtn.addEventListener('click', () => {
   textDisplay.textContent = "Let the battle begin! Rock, Paper or Scissors?";
   mainBtn.style.display = 'none';
-  game();
 
   rock.addEventListener('click', () => {
     playerSelection = 'rock'
@@ -33,9 +34,10 @@ mainBtn.addEventListener('click', () => {
   playAgain.addEventListener('click', () => {
     playerScore = 0;
     computerScore = 0;
+    userScore.textContent = 0;
+    compScore.textContent = 0;
     gameChoices.style.display = "flex";
     playAgain.style.display = "none";
-    game();
 
     textDisplay.textContent = "Let the battle begin! Rock, Paper or Scissors?";
   });
@@ -48,11 +50,9 @@ function game() {
     
     return randomValue(play);
   }
-
+  
   computerSelection = computerPlay();
 
-  console.log(computerSelection);
-  
   function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
       textDisplay.textContent = "Tie!";
@@ -76,8 +76,10 @@ function game() {
       computerScore++;
     }
 
-    console.log(playerScore, computerScore);
+    userScore.textContent = `${playerScore}`;
+    compScore.textContent = `${computerScore}`;
   }
+  
   
   playRound(playerSelection.toLowerCase(), computerSelection.toLowerCase());
 
