@@ -13,7 +13,7 @@ let computerScore = 0;
 let playerSelection = '';
 
 mainBtn.addEventListener('click', () => {
-  textDisplay.textContent = "Let the battle begin! Rock, Paper or Scissors?";
+  textDisplay.textContent = "Let the battle begin!";
   mainBtn.style.display = 'none';
 
   rock.addEventListener('click', () => {
@@ -39,7 +39,7 @@ mainBtn.addEventListener('click', () => {
     gameChoices.style.display = "flex";
     playAgain.style.display = "none";
 
-    textDisplay.textContent = "Let the battle begin! Rock, Paper or Scissors?";
+    textDisplay.textContent = "Let the battle begin!";
   });
 });
 
