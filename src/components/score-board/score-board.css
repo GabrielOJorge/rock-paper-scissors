@@ -11,3 +11,7 @@
 .score-board h1 {
   font-size: clamp(1.6rem, 2.5rem, 2vw);
 }
+
+.score-board span {
+  font-size: clamp(1.6rem, 3.5rem, 3vw);
+}
