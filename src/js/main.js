@@ -1,10 +1,14 @@
 const mainBtn = document.querySelector('.main-btn');
 const playAgain = document.querySelector('.main-btn.-play-again')
 const textDisplay = document.querySelector('#text-display')
-const rock = document.querySelector('#rock');
-const paper = document.querySelector('#paper');
-const scissors = document.querySelector('#scissors');
+const rockBtn = document.querySelector('#rock');
+const paperBtn = document.querySelector('#paper');
+const scissorsBtn = document.querySelector('#scissors');
 const gameChoices = document.querySelector('.game-choices');
+const choicesBtn = document.querySelectorAll('.far');
+const rock = document.querySelector('.fa-hand-rock');
+const paper = document.querySelector('.fa-hand-paper');
+const scissors = document.querySelector('.fa-hand-scissors');
 let userScore = document.querySelector('#user-score');
 let compScore = document.querySelector('#comp-score');
 
@@ -16,18 +20,27 @@ mainBtn.addEventListener('click', () => {
   textDisplay.textContent = "Let the battle begin!";
   mainBtn.style.display = 'none';
 
-  rock.addEventListener('click', () => {
-    playerSelection = 'rock'
+  choicesBtn.forEach(choice => {
+    choice.addEventListener("click", () => {
+      rock.classList.remove("active");
+      paper.classList.remove("active");
+      scissors.classList.remove("active");
+      choice.classList.toggle("active");
+    });
+  });
+
+  rockBtn.addEventListener('click', () => {
+    playerSelection = 'rock';
     game();
   });
   
-  paper.addEventListener('click', () => {
-    playerSelection = 'paper'
+  paperBtn.addEventListener('click', () => {
+    playerSelection = 'paper';
     game();
   });
   
-  scissors.addEventListener('click', () => {
-    playerSelection = 'scissors'
+  scissorsBtn.addEventListener('click', () => {
+    playerSelection = 'scissors';
     game();
   });
 
@@ -39,18 +52,22 @@ mainBtn.addEventListener('click', () => {
     gameChoices.style.display = "flex";
     playAgain.style.display = "none";
 
+    rock.classList.remove("active");
+    paper.classList.remove("active");
+    scissors.classList.remove("active");
     textDisplay.textContent = "Let the battle begin!";
+
   });
 });
 
-function game() {
-  function computerPlay() {
-    const play = ["rock", "paper", "scissors"];
-    const randomValue = list => list[Math.floor(Math.random() * list.length)];
-    
-    return randomValue(play);
-  }
+function computerPlay() {
+  const play = ["rock", "paper", "scissors"];
+  const randomValue = list => list[Math.floor(Math.random() * list.length)];
   
+  return randomValue(play);
+}
+
+function game() {
   computerSelection = computerPlay();
 
   function playRound(playerSelection, computerSelection) {
