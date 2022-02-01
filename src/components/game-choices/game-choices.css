@@ -23,6 +23,11 @@
   border-color: #fff;
 }
 
+.active {
+  color: #fff;
+  border-color: #fff;
+}
+
 .fa-hand-paper {
   padding: 1.4rem 1.8rem;
 }
